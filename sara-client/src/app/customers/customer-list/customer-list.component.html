@@ -1,7 +1,11 @@
 <div id="customer-list">
-  @for (customer of customers; track customer.name) {
-  <app-customer-list-item [name]="customer.name"></app-customer-list-item>}
-  @empty {
+  @for (customer of customers; track customer.id) {
+  <app-customer-list-item
+    [id]="customer.id"
+    [name]="customer.name"
+    (viewCustomerDetails)="openCustomerDetailsPage($event)"
+  ></app-customer-list-item
+  >} @empty {
   <li>There are no customers.</li>
   }
 </div>

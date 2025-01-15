@@ -1,0 +1,94 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "companyName": "Home Invest Belgium",
+      "contactPerson": "Alice Dupont",
+      "email": "alice.dupont@homeinvest.be",
+      "phone": "+32 2 740 14 50",
+      "address": "Boulevard de la Woluwe 60, 1200 Brussels, Belgium",
+      "website": "https://www.homeinvestbelgium.be/"
+    },
+    {
+      "id": 2,
+      "companyName": "Renthero",
+      "contactPerson": "Bob Peeters",
+      "email": "bob.peeters@renthero.be",
+      "phone": "+32 3 123 45 67",
+      "address": "Kipdorp 30, 2000 Antwerp, Belgium",
+      "website": "https://renthero.be/en"
+    },
+    {
+      "id": 3,
+      "companyName": "Engel & Völkers Belgium",
+      "contactPerson": "Charlotte Vermeulen",
+      "email": "charlotte.vermeulen@engelvoelkers.be",
+      "phone": "+32 2 880 40 21",
+      "address": "Chaussée de Waterloo 1173, 1180 Uccle, Brussels, Belgium",
+      "website": "https://www.engelvoelkers.com/be/en/"
+    },
+    {
+      "id": 4,
+      "companyName": "ImmoVlan",
+      "contactPerson": "David Janssens",
+      "email": "david.janssens@immovlan.be",
+      "phone": "+32 2 790 25 50",
+      "address": "Rue Royale 100, 1000 Brussels, Belgium",
+      "website": "https://www.immovlan.be/"
+    },
+    {
+      "id": 5,
+      "companyName": "Century 21 Benelux",
+      "contactPerson": "Eva De Smet",
+      "email": "eva.desmet@century21.be",
+      "phone": "+32 2 303 21 00",
+      "address": "Avenue de Tervueren 36, 1040 Etterbeek, Belgium",
+      "website": "https://www.century21.be/"
+    },
+    {
+      "id": 6,
+      "companyName": "Dewaele Real Estate Group",
+      "contactPerson": "Frank Maes",
+      "email": "frank.maes@dewaele.com",
+      "phone": "+32 9 221 00 00",
+      "address": "Kouter 1, 9000 Ghent, Belgium",
+      "website": "https://www.dewaele.com/"
+    },
+    {
+      "id": 7,
+      "companyName": "Trevi Group",
+      "contactPerson": "Gisèle Van Damme",
+      "email": "gisele.vandamme@trevi.be",
+      "phone": "+32 2 340 24 73",
+      "address": "Avenue Louise 250, 1050 Brussels, Belgium",
+      "website": "https://www.trevi.be/"
+    },
+    {
+      "id": 8,
+      "companyName": "ERA Belgium",
+      "contactPerson": "Hugo Claes",
+      "email": "hugo.claes@era.be",
+      "phone": "+32 3 820 82 82",
+      "address": "Bredabaan 307, 2170 Merksem, Belgium",
+      "website": "https://www.era.be/"
+    },
+    {
+      "id": 9,
+      "companyName": "Victoire Properties",
+      "contactPerson": "Isabelle Dubois",
+      "email": "isabelle.dubois@victoire.be",
+      "phone": "+32 2 375 10 10",
+      "address": "Avenue Louise 523, 1050 Brussels, Belgium",
+      "website": "https://www.victoire.be/"
+    },
+    {
+      "id": 10,
+      "companyName": "Macnash Real Estate",
+      "contactPerson": "Jeroen De Wilde",
+      "email": "jeroen.dewilde@macnash.com",
+      "phone": "+32 2 347 11 47",
+      "address": "Chaussée de Waterloo 508, 1050 Brussels, Belgium",
+      "website": "https://www.macnash.com/"
+    }
+  ]
+}

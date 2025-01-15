@@ -1,3 +1,6 @@
 <small *ngIf="inDevMode" class="debug">{{ me }}</small>
 
-<app-customer-list></app-customer-list>
+<app-customer-list
+  [customers]="customers"
+  (viewCustomerDetails)="openCustomerDetailsDialog($event)"
+></app-customer-list>

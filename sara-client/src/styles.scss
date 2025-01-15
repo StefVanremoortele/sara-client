@@ -1,24 +1,53 @@
-@use '@angular/material' as mat;
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-// :root {
-//     mat-toolbar {
-//       --mat-toolbar-container-background-color: #{mat.get-theme-color($theme, primary, 40)};
-//     }
-//   }
+.debug {
+  background: black;
+  color: white;
+  width: 100%;
+  display: block;
+}
 
-$my-palette: mat.$m2-indigo-palette;
-$app-primary: mat.define-palette(mat.$indigo-palette);
-$app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$app-warn: mat.define-palette(mat.$red-palette);
+.mat-mdc-dialog-container {
+  // --mdc-dialog-container-shape: 20px;
+  --mdc-dialog-container-shape: 0px;
+  transition: none !important; // Disable all transitions for dialog container
+  animation: none !important;
+}
 
-$app-theme: mat.define-light-theme((
-  color: (
-    primary: $app-primary,
-    accent: $app-accent,
-    warn: $app-warn,
-  )
-));
+// .no-animation .mat-dialog-container {
+//   animation: none !important;
+// }
+
+// .mat-dialog-container {
+//   transition: none !important; // Disable all transitions for dialog container
+// }
+
+// .no-animation,
+// .mat-dialog-container {
+//   animation: none !important;
+//   transition: none !important;
+// }
+
+// .cdk-overlay-backdrop {
+//   animation: none !important;
+//   transition: none !important;
+// }
+// .mat-mdc-dialog-inner-container {
+//   animation: none !important;
+//   transition: none !important;
+// }
+
+// .mat-mdc-dialog-surface {
+//   animation: none !important;
+//   transition: none !important;
+// }
+

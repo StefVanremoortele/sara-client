@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-customer-list',
   standalone: false,
-  
+
   templateUrl: './customer-list.component.html',
-  styleUrl: './customer-list.component.scss'
+  styleUrl: './customer-list.component.scss',
 })
 export class CustomerListComponent {
-  
-  customers = [{name: "George"}, {name: "Bernadette"}]
+  @Input() customers: any = [];
+  @Output() viewCustomerDetails = new EventEmitter<number>();
 
+  openCustomerDetailsPage(id: number) {
+    this.viewCustomerDetails.emit(id)
+  }
 }
