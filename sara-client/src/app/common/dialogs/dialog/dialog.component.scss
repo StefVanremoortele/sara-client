@@ -1,0 +1,14 @@
+// mat-dialog-content {
+// //   box-sizing: content-box;
+// //   max-height: auto !important;
+// }
+
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-mdc-dialog-content {
+  max-height: initial;
+}
