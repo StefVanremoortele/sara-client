@@ -11,7 +11,7 @@ export class CustomerListComponent {
   @Input() customers: any = [];
   @Output() viewCustomerDetails = new EventEmitter<number>();
 
-  openCustomerDetailsPage(id: number) {
+  openCustomerDetailsPage(id: any) {
     this.viewCustomerDetails.emit(id)
   }
 }

@@ -23,7 +23,7 @@ export class CustomersComponent extends BaseComponent {
     super();
   }
 
-  openCustomerDetailsDialog(customerId: number) {
+  openCustomerDetailsDialog(customerId: any) {
     this._customer.getCustomer(customerId).subscribe((response) => {
       let customerData = response;
       this._dialog.openCustomerDetailDialog(customerData);
