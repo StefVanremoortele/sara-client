@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidenavModalComponent } from './sidenav-modal.component';
+import { NotFoundComponent } from './not-found.component';
 
-describe('SidenavModalComponent', () => {
-  let component: SidenavModalComponent;
-  let fixture: ComponentFixture<SidenavModalComponent>;
+describe('NotFoundComponent', () => {
+  let component: NotFoundComponent;
+  let fixture: ComponentFixture<NotFoundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SidenavModalComponent]
+      declarations: [NotFoundComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SidenavModalComponent);
+    fixture = TestBed.createComponent(NotFoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

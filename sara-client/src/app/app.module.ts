@@ -5,8 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatListModule} from '@angular/material/list'; 
-import {MatDialogModule} from '@angular/material/dialog'; 
+import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,11 +17,13 @@ import { BuildingListItemComponent } from './buildings/building-list-item/buildi
 import { CustomersComponent } from './customers/customers.component';
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
 import { CustomerListItemComponent } from './customers/customer-list/customer-list-item/customer-list-item.component';
-import { SidenavModalComponent } from './core/layout/sidenav-modal/sidenav-modal.component';
 import { BaseDialogComponent } from './common/dialogs/dialog/dialog.component';
-import { provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { mockHttpInterceptor } from './core/interceptors/mock-http.interceptor';
 import { CustomerDetailsDialogComponent } from './common/dialogs/customer-details-dialog/customer-details-dialog.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { counterReducer } from './reducers/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,8 @@ import { CustomerDetailsDialogComponent } from './common/dialogs/customer-detail
     CustomersComponent,
     CustomerListComponent,
     CustomerListItemComponent,
-    SidenavModalComponent,
     BaseDialogComponent,
-    CustomerDetailsDialogComponent
+    CustomerDetailsDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,12 +46,22 @@ import { CustomerDetailsDialogComponent } from './common/dialogs/customer-detail
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    
+    // state management
+    StoreModule.forRoot({counter: counterReducer}),
+    
+    // debugging
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      // logOnly: environment.production,
+      logOnly: false,
+    }),
   ],
   providers: [
     provideAnimationsAsync(),
-    provideHttpClient(withInterceptors([mockHttpInterceptor]))
+    provideHttpClient(withInterceptors([mockHttpInterceptor])),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
