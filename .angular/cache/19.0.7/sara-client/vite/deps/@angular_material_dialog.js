@@ -3,7 +3,8 @@ import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-} from "./chunk-2GZ62IE6.js";
+} from "./chunk-FPD3XJHU.js";
+import "./chunk-VKQNNXQK.js";
 import {
   animate,
   animateChild,
@@ -14,7 +15,6 @@ import {
   transition,
   trigger
 } from "./chunk-DMAEOOYE.js";
-import "./chunk-JIOWHTCY.js";
 import {
   A11yModule,
   BidiModule,
@@ -27,7 +27,7 @@ import {
   _CdkPrivateStyleLoader,
   _IdGenerator,
   hasModifierKey
-} from "./chunk-FEJAL7EE.js";
+} from "./chunk-JMDERM4M.js";
 import {
   Platform,
   _getEventTarget,
@@ -37,7 +37,7 @@ import {
   coerceCssPixelValue,
   coerceNumberProperty,
   supportsScrollBehavior
-} from "./chunk-YQJCLV54.js";
+} from "./chunk-A2VJDDD7.js";
 import {
   DOCUMENT,
   Location
@@ -95,11 +95,11 @@ import {
   ɵɵtemplate,
   ɵɵviewQuery
 } from "./chunk-Q2LTHEMF.js";
-import "./chunk-WSXI74FV.js";
 import {
   defer,
   merge
 } from "./chunk-LBBSG2YE.js";
+import "./chunk-WSXI74FV.js";
 import {
   Subject,
   Subscription,

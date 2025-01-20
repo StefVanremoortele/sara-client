@@ -10,6 +10,7 @@ import { CustomersComponent } from './customers.component';
 import { counterReducer } from './state/reducers/counter.reducer';
 
 import { CounterEffects } from './state/effects/counter.effects';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CounterEffects } from './state/effects/counter.effects';
   ],
   imports: [
     CommonModule,
+    MatTableModule,
     StoreModule.forFeature('counter', counterReducer), // Register feature state
     EffectsModule.forFeature([CounterEffects]), // Register feature effects
   ],

@@ -14,9 +14,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BuildingsComponent } from './buildings/buildings.component';
 import { HomeComponent } from './home/home.component';
 import { BuildingListItemComponent } from './buildings/building-list-item/building-list-item.component';
-import { CustomersComponent } from './customers/customers.component';
-import { CustomerListComponent } from './customers/customer-list/customer-list.component';
-import { CustomerListItemComponent } from './customers/customer-list/customer-list-item/customer-list-item.component';
 import { BaseDialogComponent } from './common/dialogs/dialog/dialog.component';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { mockHttpInterceptor } from './core/interceptors/mock-http.interceptor';
@@ -25,6 +22,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CustomersModule } from './customers/customers.module';
 import { EffectsModule } from '@ngrx/effects';
+import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -45,6 +43,7 @@ import { EffectsModule } from '@ngrx/effects';
     MatSidenavModule,
     MatListModule,
     MatDialogModule,
+    MatTableModule,
     
     // custom modules
     CustomersModule,
