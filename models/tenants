@@ -1,0 +1,21 @@
+Tenants Model
+Attributes:
+
+tenant_id (Unique identifier for the tenant)
+name (Name of the tenant)
+contact_info (Contact details for the tenant, such as phone number, email, etc.)
+privative (The privative/unit the tenant occupies)
+payments (List of payments made by the tenant for shared costs)
+Key Methods:
+
+Adds a payment made by the tenant.
+add_payment(payment)
+
+Calculates and returns the tenant’s outstanding balance for the year.
+get_outstanding_balance()
+
+Returns the total payments made by the tenant.
+get_total_payments()
+
+Assigns a privative (unit) to the tenant.
+assign_privative(privative)

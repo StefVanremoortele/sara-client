@@ -1,0 +1,18 @@
+Privatives Model
+Attributes:
+
+privative_id (Unique identifier for the privative/unit)
+size (Size of the unit, which can influence the cost allocation)
+has_garage (Boolean to indicate if the unit has a private garage)
+tenant (The tenant associated with the privative)
+building (The building the privative is part of)
+Key Methods:
+
+Calculates the tenant’s share of the total shared costs based on the unit's size and amenities (e.g., garage).
+calculate_share_of_costs(total_shared_costs, building)
+
+Assigns a tenant to this privative.
+assign_tenant(tenant)
+
+Returns the tenant associated with the privative.
+get_tenant()

@@ -1,0 +1,48 @@
+ <div class="logged-out-view">
+    <h2>S Y N D I C U S</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-form">
+      <!-- Email Field -->
+      <mat-form-field appearance="outline" class="full-width" >
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+          #emailInput="ngModel"
+        />
+        <mat-error *ngIf="emailInput.invalid && emailInput.touched">
+          Please enter a valid email.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Password Field -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+          minlength="6"
+          #passwordInput="ngModel"
+        />
+        <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">
+          Password must be at least 6 characters long.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Login Button -->
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="full-width"
+        [disabled]="loginForm.invalid"
+      >
+        Log In
+      </button>
+    </form>
+  </div> 

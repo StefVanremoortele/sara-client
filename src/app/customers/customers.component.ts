@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { BaseComponent } from '../common/base.component';
-import { DialogService } from '../core/services/dialog.service';
-import { CustomerService } from './customer.service';
 import { Observable, of } from 'rxjs';
-import { MockService } from '../common/mock.service';
+
+import { CustomerService } from './customer.service';
+import { BaseComponent } from '@syndicus/shared/base.component';
+import { DialogService } from '@syndicus/core/services/dialog.service';
+import { MockService } from '@syndicus/shared/mock.service';
 
 @Component({
   selector: 'app-customers',

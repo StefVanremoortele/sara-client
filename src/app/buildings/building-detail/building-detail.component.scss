@@ -1,0 +1,73 @@
+mat-list-item {
+  height: auto !important;
+}
+.building-detail {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+
+  .building-info {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .perivatives-section {
+    margin-top: 20px;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fafafa;
+      }
+    }
+
+    .add-perivative {
+      margin-top: 20px;
+
+      form {
+        div {
+          margin-bottom: 10px;
+
+          label {
+            display: block;
+            font-weight: bold;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+          }
+        }
+
+        button {
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}

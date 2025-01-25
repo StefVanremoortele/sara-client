@@ -1,22 +1,43 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { HttpResponse } from '@angular/common/http';
 import { of } from 'rxjs';
-import mockData from '../../../assets/mock-data.json';
+import { __assign } from 'tslib';
+import mockData from '../../../assets/mock/fixtures.json';
 
 export const mockHttpInterceptor: HttpInterceptorFn = (req, next) => {
-  if (req.url.endsWith('/api/customers') && req.method === 'GET') {
-    const customerData = mockData['customers'];
+  if (req.url.endsWith('/api/buildings') && req.method === 'GET') {
+    const buildings = mockData['building'];
 
-    return of(new HttpResponse({ status: 200, body: customerData }));
+    return of(new HttpResponse({ status: 200, body: buildings }));
   }
-  console.log(req);
+
+  if (req.url.search('/api/buildings/1') && req.method === 'GET') {
+    const building = Object.assign(mockData['buildings'][0]);
+    building.privatives = [
+      {
+        "code": "00 01",
+        "tenant": "Peter Vandekerhove"
+      },
+      {
+        "code": "00 02",
+        "tenant": "Dirk Heyns"
+      },
+    ]
+
+    return of(new HttpResponse({ status: 200, body: building }));
+  }
+
+  if (req.url.endsWith('/api/customers') && req.method === 'GET') {
+    const customers = mockData['customers'];
+
+    return of(new HttpResponse({ status: 200, body: customers }));
+  }
 
   if (req.url.search('/api/customers/1') && req.method === 'GET') {
-    const customerData = mockData['customers'];
+    const customer = Object.assign(mockData['customers'][0]);
+    customer.test = "tesat"
 
-    const customerDetails = customerData.find((c) => c.id == 1);
-
-    return of(new HttpResponse({ status: 200, body: customerDetails }));
+    return of(new HttpResponse({ status: 200, body: customer }));
   }
 
   return next(req);

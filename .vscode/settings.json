@@ -1,7 +1,14 @@
 {
-	"workbench.colorCustomizations": {
-		"activityBar.background": "#4C056A",
-		"titleBar.activeBackground": "#6B0794",
-		"titleBar.activeForeground": "#FDF9FF"
-	}
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.angular/": true,
+    "**/cache": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#4C056A",
+    "titleBar.activeBackground": "#6B0794",
+    "titleBar.activeForeground": "#FDF9FF"
+  }
 }

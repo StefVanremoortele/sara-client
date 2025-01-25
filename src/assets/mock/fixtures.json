@@ -1,0 +1,348 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "companyName": "Home Invest Belgium",
+      "contactPerson": "Alice Dupont",
+      "email": "alice.dupont@homeinvest.be",
+      "phone": "+32 2 740 14 50",
+      "address": "Boulevard de la Woluwe 60, 1200 Brussels, Belgium",
+      "website": "https://www.homeinvestbelgium.be/"
+    },
+    {
+      "id": 2,
+      "companyName": "Renthero",
+      "contactPerson": "Bob Peeters",
+      "email": "bob.peeters@renthero.be",
+      "phone": "+32 3 123 45 67",
+      "address": "Kipdorp 30, 2000 Antwerp, Belgium",
+      "website": "https://renthero.be/en"
+    },
+    {
+      "id": 3,
+      "companyName": "Engel & Völkers Belgium",
+      "contactPerson": "Charlotte Vermeulen",
+      "email": "charlotte.vermeulen@engelvoelkers.be",
+      "phone": "+32 2 880 40 21",
+      "address": "Chaussée de Waterloo 1173, 1180 Uccle, Brussels, Belgium",
+      "website": "https://www.engelvoelkers.com/be/en/"
+    },
+    {
+      "id": 4,
+      "companyName": "ImmoVlan",
+      "contactPerson": "David Janssens",
+      "email": "david.janssens@immovlan.be",
+      "phone": "+32 2 790 25 50",
+      "address": "Rue Royale 100, 1000 Brussels, Belgium",
+      "website": "https://www.immovlan.be/"
+    },
+    {
+      "id": 5,
+      "companyName": "Century 21 Benelux",
+      "contactPerson": "Eva De Smet",
+      "email": "eva.desmet@century21.be",
+      "phone": "+32 2 303 21 00",
+      "address": "Avenue de Tervueren 36, 1040 Etterbeek, Belgium",
+      "website": "https://www.century21.be/"
+    },
+    {
+      "id": 6,
+      "companyName": "Dewaele Real Estate Group",
+      "contactPerson": "Frank Maes",
+      "email": "frank.maes@dewaele.com",
+      "phone": "+32 9 221 00 00",
+      "address": "Kouter 1, 9000 Ghent, Belgium",
+      "website": "https://www.dewaele.com/"
+    },
+    {
+      "id": 7,
+      "companyName": "Trevi Group",
+      "contactPerson": "Gisèle Van Damme",
+      "email": "gisele.vandamme@trevi.be",
+      "phone": "+32 2 340 24 73",
+      "address": "Avenue Louise 250, 1050 Brussels, Belgium",
+      "website": "https://www.trevi.be/"
+    },
+    {
+      "id": 8,
+      "companyName": "ERA Belgium",
+      "contactPerson": "Hugo Claes",
+      "email": "hugo.claes@era.be",
+      "phone": "+32 3 820 82 82",
+      "address": "Bredabaan 307, 2170 Merksem, Belgium",
+      "website": "https://www.era.be/"
+    },
+    {
+      "id": 9,
+      "companyName": "Victoire Properties",
+      "contactPerson": "Isabelle Dubois",
+      "email": "isabelle.dubois@victoire.be",
+      "phone": "+32 2 375 10 10",
+      "address": "Avenue Louise 523, 1050 Brussels, Belgium",
+      "website": "https://www.victoire.be/"
+    },
+    {
+      "id": 10,
+      "companyName": "Macnash Real Estate",
+      "contactPerson": "Jeroen De Wilde",
+      "email": "jeroen.dewilde@macnash.com",
+      "phone": "+32 2 347 11 47",
+      "address": "Chaussée de Waterloo 508, 1050 Brussels, Belgium",
+      "website": "https://www.macnash.com/"
+    }
+  ],
+  "buildings": [
+    {
+      "id": 1,
+      "name": "Empire State Building",
+      "address": "350 5th Ave, New York, NY 10118, USA",
+      "floors": 102,
+      "yearConstructed": 1931
+    },
+    {
+      "id": 2,
+      "name": "Burj Khalifa",
+      "address": "1 Sheikh Mohammed bin Rashid Blvd, Dubai, UAE",
+      "floors": 163,
+      "yearConstructed": 2010
+    },
+    {
+      "id": 3,
+      "name": "Eiffel Tower",
+      "address": "Champ de Mars, 5 Avenue Anatole, Paris, France",
+      "floors": 3,
+      "yearConstructed": 1889
+    },
+    {
+      "id": 4,
+      "name": "Shanghai Tower",
+      "address": "501 Yincheng Middle Rd, Lujiazui, Shanghai, China",
+      "floors": 128,
+      "yearConstructed": 2015
+    },
+    {
+      "id": 5,
+      "name": "The Shard",
+      "address": "32 London Bridge St, London, UK",
+      "floors": 95,
+      "yearConstructed": 2012
+    },
+    {
+      "id": 6,
+      "name": "Willis Tower",
+      "address": "233 S Wacker Dr, Chicago, IL 60606, USA",
+      "floors": 110,
+      "yearConstructed": 1973
+    },
+    {
+      "id": 7,
+      "name": "Petronas Towers",
+      "address": "Kuala Lumpur City Centre, Kuala Lumpur, Malaysia",
+      "floors": 88,
+      "yearConstructed": 1998
+    },
+    {
+      "id": 8,
+      "name": "Taipei 101",
+      "address": "7 Section 5, Xinyi Rd, Taipei, Taiwan",
+      "floors": 101,
+      "yearConstructed": 2004
+    },
+    {
+      "id": 9,
+      "name": "One World Trade Center",
+      "address": "285 Fulton St, New York, NY 10007, USA",
+      "floors": 104,
+      "yearConstructed": 2014
+    },
+    {
+      "id": 10,
+      "name": "Marina Bay Sands",
+      "address": "10 Bayfront Ave, Singapore",
+      "floors": 57,
+      "yearConstructed": 2010
+    }
+  ],
+  "privatvies": [
+    {
+      "privative_id": 101,
+      "size": 85,
+      "has_garage": true,
+      "tenant": {
+        "tenant_id": 1001,
+        "name": "Sophie Dupont",
+        "contact_info": {
+          "email": "sophie.dupont@email.be",
+          "phone": "+32 476 23 45 67"
+        }
+      },
+      "building": {
+        "building_id": 1,
+        "name": "Les Jardins de Bruxelles",
+        "address": "Avenue Louise 45, 1050 Bruxelles, Belgique"
+      }
+    },
+    {
+      "privative_id": 102,
+      "size": 65,
+      "has_garage": false,
+      "tenant": {
+        "tenant_id": 1002,
+        "name": "Marc Lefevre",
+        "contact_info": {
+          "email": "marc.lefevre@email.be",
+          "phone": "+32 499 56 78 90"
+        }
+      },
+      "building": {
+        "building_id": 2,
+        "name": "Résidence des Arts",
+        "address": "Rue de la Loi 12, 1000 Bruxelles, Belgique"
+      }
+    },
+    {
+      "privative_id": 103,
+      "size": 120,
+      "has_garage": true,
+      "tenant": {
+        "tenant_id": 1003,
+        "name": "Émilie Dubois",
+        "contact_info": {
+          "email": "emilie.dubois@email.be",
+          "phone": "+32 485 67 89 12"
+        }
+      },
+      "building": {
+        "building_id": 3,
+        "name": "Le Parc des Roseaux",
+        "address": "Avenue de Tervuren 28, 1150 Bruxelles, Belgique"
+      }
+    },
+    {
+      "privative_id": 104,
+      "size": 55,
+      "has_garage": false,
+      "tenant": {
+        "tenant_id": 1004,
+        "name": "Julien Martin",
+        "contact_info": {
+          "email": "julien.martin@email.be",
+          "phone": "+32 498 75 34 21"
+        }
+      },
+      "building": {
+        "building_id": 4,
+        "name": "Les Horizons de Liège",
+        "address": "Place Saint-Lambert 3, 4000 Liège, Belgique"
+      }
+    },
+    {
+      "privative_id": 105,
+      "size": 75,
+      "has_garage": true,
+      "tenant": {
+        "tenant_id": 1005,
+        "name": "Claire Vandermeer",
+        "contact_info": {
+          "email": "claire.vandermeer@email.be",
+          "phone": "+32 477 89 12 34"
+        }
+      },
+      "building": {
+        "building_id": 5,
+        "name": "Les Coteaux du Brabant",
+        "address": "Rue de la Station 10, 1400 Nivelles, Belgique"
+      }
+    },
+    {
+      "privative_id": 106,
+      "size": 90,
+      "has_garage": true,
+      "tenant": {
+        "tenant_id": 1006,
+        "name": "Philippe Gérard",
+        "contact_info": {
+          "email": "philippe.gerard@email.be",
+          "phone": "+32 491 12 34 56"
+        }
+      },
+      "building": {
+        "building_id": 6,
+        "name": "Le Domaine de la Forêt",
+        "address": "Rue du Chêne 8, 7000 Mons, Belgique"
+      }
+    },
+    {
+      "privative_id": 107,
+      "size": 110,
+      "has_garage": true,
+      "tenant": {
+        "tenant_id": 1007,
+        "name": "Isabelle Leroy",
+        "contact_info": {
+          "email": "isabelle.leroy@email.be",
+          "phone": "+32 478 90 12 34"
+        }
+      },
+      "building": {
+        "building_id": 7,
+        "name": "Les Jardins de Charleroi",
+        "address": "Boulevard Joseph II 23, 6000 Charleroi, Belgique"
+      }
+    },
+    {
+      "privative_id": 108,
+      "size": 60,
+      "has_garage": false,
+      "tenant": {
+        "tenant_id": 1008,
+        "name": "Antoine Lefranc",
+        "contact_info": {
+          "email": "antoine.lefranc@email.be",
+          "phone": "+32 485 34 56 78"
+        }
+      },
+      "building": {
+        "building_id": 8,
+        "name": "Le Parc d'Anvers",
+        "address": "Avenue des Tilleuls 15, 2000 Anvers, Belgique"
+      }
+    },
+    {
+      "privative_id": 109,
+      "size": 130,
+      "has_garage": true,
+      "tenant": {
+        "tenant_id": 1009,
+        "name": "Marine Dupuis",
+        "contact_info": {
+          "email": "marine.dupuis@email.be",
+          "phone": "+32 476 34 23 89"
+        }
+      },
+      "building": {
+        "building_id": 9,
+        "name": "La Résidence Royale",
+        "address": "Avenue Franklin Roosevelt 30, 1050 Bruxelles, Belgique"
+      }
+    },
+    {
+      "privative_id": 110,
+      "size": 95,
+      "has_garage": false,
+      "tenant": {
+        "tenant_id": 1010,
+        "name": "Lucie Dufresne",
+        "contact_info": {
+          "email": "lucie.dufresne@email.be",
+          "phone": "+32 495 67 89 01"
+        }
+      },
+      "building": {
+        "building_id": 10,
+        "name": "Les Grands Boulevards",
+        "address": "Boulevard de la Mer 18, 8400 Ostende, Belgique"
+      }
+    }
+  ]
+}

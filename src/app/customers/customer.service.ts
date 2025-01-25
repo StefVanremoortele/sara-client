@@ -5,10 +5,10 @@ import { ApiService } from '../core/services/api.service';
   providedIn: 'root',
 })
 export class CustomerService {
-  constructor(private _api: ApiService) {}
+  constructor(private _api: ApiService) { }
 
   getCustomer(customerId: number) {
-    return this._api.get('CUSTOMER_DETAILS', String(customerId));
+    return this._api.get('CUSTOMER_DETAIL', String(customerId));
     // return this._api.get('CUSTOMER_LIST');
   }
 }

@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { BaseComponent } from '../../common/base.component';
+import { BaseComponent } from '../../shared/base.component';
 
 @Component({
   selector: 'app-building-list-item',

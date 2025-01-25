@@ -1,15 +1,18 @@
-h1 {
-  padding: 0 1rem;
+.expanded {
+  width: 250px;
 }
 
-h2 {
-  padding: 1rem;
+.span {
+  display: inline-block;
+  width: 100%;
+  background: white;
 }
 
 mat-toolbar {
   position: fixed;
   top: 0;
   z-index: 2;
+  width: 100%;
 }
 
 mat-sidenav-container {
@@ -22,24 +25,34 @@ mat-sidenav {
   @media screen and (min-width: 600px) {
     padding-top: 4rem;
   }
-  // .entry{
-  //     display: flex;GG
-  //     align-items: center;
-  //     gap: 1rem;
-  //     padding:0.75rem;
-  // }
 }
 
 mat-sidenav-content {
-  // padding-top: 3.5rem;
-  padding: 5px;
-  background: lightgray;
-
   @media screen and (min-width: 600px) {
     padding-top: 4rem;
   }
 }
 
-.expanded {
-  width: 250px;
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .app-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  button {
+    margin-right: 8px;
+
+    mat-icon {
+      margin-right: 4px;
+    }
+  }
 }

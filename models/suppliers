@@ -1,0 +1,24 @@
+Suppliers Model
+Attributes:
+
+supplier_id (Unique identifier for the supplier)
+name (Name of the supplier or contractor)
+service_type (The type of service provided, e.g., maintenance, cleaning)
+contract_start_date (Start date of the service contract)
+contract_end_date (End date of the service contract)
+cost (Cost of the supplier's service)
+payment_schedule (The schedule of payments for the supplier, e.g., monthly, quarterly)
+building (The building this supplier is contracted for)
+Key Methods:
+
+Updates the cost of the supplier’s service.
+update_service_cost(new_cost)
+
+Adds or updates the service contract dates for the supplier.
+add_contract(contract_start_date, contract_end_date)
+
+Generates an invoice for the services provided by the supplier.
+generate_invoice()
+
+Returns a list of the supplier's active contracts with buildings.
+get_active_contracts()

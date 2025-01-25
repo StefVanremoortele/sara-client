@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
-import { CustomerListItemComponent } from './customer-list/customer-list-item/customer-list-item.component';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-import { CustomersComponent } from './customers.component';
-import { counterReducer } from './state/reducers/counter.reducer';
-
-import { CounterEffects } from './state/effects/counter.effects';
-import { MatTableModule } from '@angular/material/table';
+import { CustomerListItemComponent } from '@syndicus/customers/customer-list/customer-list-item/customer-list-item.component';
+import { CustomerListComponent } from '@syndicus/customers/customer-list/customer-list.component';
+import { CustomersComponent } from '@syndicus/customers/customers.component';
+import { counterReducer } from '@syndicus/customers/state/reducers/counter.reducer';
+import { CounterEffects } from '@syndicus/customers/state/effects/counter.effects';
+import { SharedModule } from '@syndicus/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,9 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     MatTableModule,
-    StoreModule.forFeature('counter', counterReducer), // Register feature state
-    EffectsModule.forFeature([CounterEffects]), // Register feature effects
+    SharedModule,
+    StoreModule.forFeature('counter', counterReducer),
+    EffectsModule.forFeature([CounterEffects]),
   ],
 })
 export class CustomersModule {}

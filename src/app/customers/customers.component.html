@@ -1,4 +1,4 @@
-<small *ngIf="inDevMode" class="debug">{{ me }}</small>
+<app-debug-title [inDevMode]="inDevMode" [componentName]="me"></app-debug-title>
 
 <!-- <app-customer-list
   [customers]="customers"
@@ -6,41 +6,36 @@
 ></app-customer-list> -->
 
 <div class="customer-table-container">
-  <h2>Customers</h2>
+  <app-view-title [title]="'klanten'"></app-view-title>
+
   <span *ngIf="customers">
     <table mat-table [dataSource]="customers" class="mat-elevation-z8">
 
-      <!-- ID Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> ID </th>
         <td mat-cell *matCellDef="let customer"> {{ customer.id }} </td>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
         <td mat-cell *matCellDef="let customer"> {{ customer.name }} </td>
       </ng-container>
 
-      <!-- Email Column -->
       <ng-container matColumnDef="email">
         <th mat-header-cell *matHeaderCellDef> Email </th>
         <td mat-cell *matCellDef="let customer"> {{ customer.email }} </td>
       </ng-container>
 
-      <!-- Phone Column -->
       <ng-container matColumnDef="phone">
         <th mat-header-cell *matHeaderCellDef> Phone </th>
         <td mat-cell *matCellDef="let customer"> {{ customer.phone }} </td>
       </ng-container>
 
-      <!-- Address Column -->
       <ng-container matColumnDef="address">
         <th mat-header-cell *matHeaderCellDef> Address </th>
         <td mat-cell *matCellDef="let customer"> {{ customer.address }} </td>
       </ng-container>
 
-      <!-- Actions Column -->
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>
         <td mat-cell *matCellDef="let customer">
@@ -49,7 +44,6 @@
         </td>
       </ng-container>
 
-      <!-- Header and Row Definitions -->
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>

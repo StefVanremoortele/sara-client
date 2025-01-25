@@ -14,7 +14,7 @@ module.exports = tseslint.config(
     ],
     processor: angular.processInlineTemplates,
     rules: {
-      "@angular-eslint/directive-selector": [
+      "@angular-eslint/rective-selector": [
         "error",
         {
           type: "attribute",
@@ -39,7 +39,8 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility,
     ],
     rules: {
-      "@typescript-eslint/no-explicit-any": "off"
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-unused-vars": "off"
     },
   }
 );

@@ -1,0 +1,30 @@
+Building Model
+Attributes:
+
+building_id (Unique identifier for the building)
+name (Name of the building)
+address (Address of the building)
+start_date (Start date of the building's fiscal year)
+fiscal_year_start_month (Month the fiscal year starts)
+num_privatives (Total number of private units)
+num_floors (Total number of floors in the building)
+budget (Annual budget for the building)
+shared_costs (Total shared costs for maintenance, utilities, etc.)
+suppliers (List of suppliers/contractors for services in the building)
+privatives (List of private units in the building)
+
+
+Calculates or updates the building’s annual budget based on costs and services.
+calculate_annual_budget()
+
+Adds a Privative (unit) to the building.
+add_privative(privative)
+
+Calculates the total shared costs for common areas and maintenance.
+calculate_shared_costs()
+
+Returns a list of tenants associated with the building.
+get_tenants()
+
+Generates the annual financial summary for the building, including total costs and tenant contributions.
+generate_financial_summary(year)

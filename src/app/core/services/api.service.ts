@@ -13,12 +13,16 @@ export class ApiService {
   get(resource: string, urlParam?: string) {
     let url = this.BASE_URL;
 
-    if (resource == 'CUSTOMER_DETAILS') {
-      url += '/api/customers'  
+    if (resource == 'CUSTOMER_DETAIL') {
+      url += '/api/customers'
     }
 
     if (resource == 'CUSTOMER_LIST') {
-      url += '/api/customers'  
+      url += '/api/customers'
+    }
+
+    if (resource == 'BUILDING_DETAIL') {
+      url += '/api/buildings'
     }
 
     if (urlParam) {

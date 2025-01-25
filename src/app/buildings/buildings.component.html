@@ -1,12 +1,16 @@
-<small *ngIf="inDevMode" class="debug">{{ me }}</small>
+<app-debug-title [inDevMode]="inDevMode" [componentName]="me"></app-debug-title>
 
 <!-- <div id="buildings-list">
     <app-building-list-item></app-building-list-item>
 </div> -->
 
 <div class="building-table-container">
-    <h2>Buildings</h2>
+    <app-view-title [title]="'Gebouwen'"></app-view-title>
+    <!-- <a [routerLink]="['/buildings', '1']">View Building</a> -->
+
     <span *ngIf="buildings">
+        <app-search (search)="applyFilter($event)"></app-search>
+
         <table mat-table [dataSource]="buildings" class="mat-elevation-z8">
             <!-- Name Column -->
             <ng-container matColumnDef="name">

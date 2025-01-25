@@ -1,16 +1,17 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
-
-import { DialogService } from './core/services/dialog.service';
-import { StateManagerService } from './core/services/state-manager.service';
-import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
 
-import {counterReducer} from './customers/state/reducers/counter.reducer';
-import * as CounterActions from './customers/state/actions/customer.actions';
-import { CounterState } from './customers/state/counter.state';
-import { selectCount } from './customers/state/selectors/counter.selectors'; // Import the selector
+import { User } from '@syndicus/core/models/user';
+import { DialogService } from '@syndicus/core/services/dialog.service';
+import { StateManagerService } from '@syndicus/core/services/state-manager.service';
+import { ApiService } from '@syndicus/core/services/api.service';
+import { MockService } from '@syndicus/shared/mock.service';
+import { CounterState } from '@syndicus//customers/state/counter.state';
+import { selectCount } from '@syndicus/customers/state/selectors/counter.selectors';
+import * as CounterActions from '@syndicus/customers/state/actions/customer.actions';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +22,13 @@ import { selectCount } from './customers/state/selectors/counter.selectors'; // 
 export class AppComponent {
   title = 'sara-client';
   counter$: Observable<number>;
+  user: User;
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   isMobile = true;
   isCollapsed = false;
+  isLoggedIn = true;
 
   links = [
     {
@@ -49,9 +52,12 @@ export class AppComponent {
     private observer: BreakpointObserver,
     private _dialog: DialogService,
     private _state: StateManagerService,
+    private _api: ApiService,
+    private _mock: MockService,
     private fromCustomers: Store<CounterState>
   ) {
     this.counter$ = this.fromCustomers.select(selectCount);
+    // this._dialog.open(BaseDialogComponent, { hasCloseButton: true });
   }
 
   ngOnInit() {
@@ -67,6 +73,11 @@ export class AppComponent {
       if (sidenavOpen) {
       }
     });
+
+    // this._api.get("BUILDING_DETAIL", "1").subscribe((res) => {
+    this._api.get("BUILDING_DETAIL", "1").subscribe((res) => {
+      console.log(res)
+    })
   }
 
   toggleMenu() {
@@ -80,11 +91,12 @@ export class AppComponent {
     this._state.toggleSidenav();
   }
 
-  openSideDrawer() {
-    this._dialog.open();
-  }
-
   increment() {
     this.fromCustomers.dispatch(CounterActions.increment());
+  }
+
+  loginSubmit() {
+    this.user = this._mock.getAnonymousUser();
+    this.isLoggedIn = this.user?.isAuthenticated;
   }
 }

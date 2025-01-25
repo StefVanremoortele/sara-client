@@ -8,46 +8,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-.debug {
-  background: black;
-  color: white;
-  width: 100%;
-  display: block;
-}
-
 .mat-mdc-dialog-container {
   // --mdc-dialog-container-shape: 20px;
   --mdc-dialog-container-shape: 0px;
-  transition: none !important; // Disable all transitions for dialog container
+  transition: none !important; 
   animation: none !important;
 }
-
-// .no-animation .mat-dialog-container {
-//   animation: none !important;
-// }
-
-// .mat-dialog-container {
-//   transition: none !important; // Disable all transitions for dialog container
-// }
-
-// .no-animation,
-// .mat-dialog-container {
-//   animation: none !important;
-//   transition: none !important;
-// }
-
-// .cdk-overlay-backdrop {
-//   animation: none !important;
-//   transition: none !important;
-// }
-// .mat-mdc-dialog-inner-container {
-//   animation: none !important;
-//   transition: none !important;
-// }
-
-// .mat-mdc-dialog-surface {
-//   animation: none !important;
-//   transition: none !important;
-// }
-

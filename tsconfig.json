@@ -19,8 +19,13 @@
     "useDefineForClassFields": false,
     "moduleResolution": "bundler",
     "importHelpers": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "paths": {
+      "@syndicus/*": ["./src/app/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,48 @@
+<div class="supplier-table-container">
+	<app-view-title [title]="'leveranciers'"></app-view-title>
+	<span *ngIf="suppliers">
+		<table mat-table [dataSource]="suppliers" class="mat-elevation-z8">
+
+			<ng-container matColumnDef="id">
+				<th mat-header-cell *matHeaderCellDef> ID </th>
+				<td mat-cell *matCellDef="let supplier"> {{ supplier.id }} </td>
+			</ng-container>
+
+			<ng-container matColumnDef="name">
+				<th mat-header-cell *matHeaderCellDef> Name </th>
+				<td mat-cell *matCellDef="let supplier"> {{ supplier.name }} </td>
+			</ng-container>
+
+			<ng-container matColumnDef="email">
+				<th mat-header-cell *matHeaderCellDef> Email </th>
+				<td mat-cell *matCellDef="let supplier"> {{ supplier.email }} </td>
+			</ng-container>
+
+			<ng-container matColumnDef="phone">
+				<th mat-header-cell *matHeaderCellDef> Phone </th>
+				<td mat-cell *matCellDef="let supplier"> {{ supplier.phone }} </td>
+			</ng-container>
+
+			<ng-container matColumnDef="address">
+				<th mat-header-cell *matHeaderCellDef> Address </th>
+				<td mat-cell *matCellDef="let supplier"> {{ supplier.address }} </td>
+			</ng-container>
+
+			<ng-container matColumnDef="btwNumber">
+				<th mat-header-cell *matHeaderCellDef> BTW Number </th>
+				<td mat-cell *matCellDef="let supplier"> {{ supplier.btwNumber }} </td>
+			</ng-container>
+
+			<ng-container matColumnDef="actions">
+				<th mat-header-cell *matHeaderCellDef> Actions </th>
+				<td mat-cell *matCellDef="let supplier">
+					<button mat-button (click)="viewSupplier(supplier)">View</button>
+					<button mat-button color="warn" (click)="deleteSupplier(supplier)">Delete</button>
+				</td>
+			</ng-container>
+
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		</table>
+	</span>
+</div>

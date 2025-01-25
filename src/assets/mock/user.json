@@ -1,0 +1,42 @@
+{
+  "loggedIn": {
+    "id": 1,
+    "username": "Sara Tavarniers",
+    "email": "sarataverniers@gmail.com",
+    "role": "admin",
+    "firstName": "Sara",
+    "lastName": "Taverniers",
+    "profilePicture": "https://example.com/images/john_doe.jpg",
+    "preferences": {
+      "theme": "dark",
+      "language": "en",
+      "notifications": {
+        "email": true,
+        "sms": false,
+        "push": true
+      }
+    },
+    "lastLogin": "2025-01-23T18:30:00Z",
+    "isAuthenticated": true
+  },
+  "anonymous": {
+    "id": null,
+    "username": "guest",
+    "email": null,
+    "role": "guest",
+    "firstName": null,
+    "lastName": null,
+    "profilePicture": null,
+    "preferences": {
+      "theme": "light",
+      "language": "en",
+      "notifications": {
+        "email": false,
+        "sms": false,
+        "push": false
+      }
+    },
+    "lastLogin": null,
+    "isAuthenticated": false
+  }
+}

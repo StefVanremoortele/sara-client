@@ -1,8 +1,13 @@
 import { inject, Injectable } from '@angular/core';
+import { ComponentType } from '@angular/cdk/overlay';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { BaseDialogComponent } from '../../common/dialogs/dialog/dialog.component';
-import { CustomerDetailsDialogComponent } from '../../common/dialogs/customer-details-dialog/customer-details-dialog.component';
+import { CustomerDetailsDialogComponent } from '@syndicus/shared/dialogs/customer-details-dialog/customer-details-dialog.component';
+import { BuildingDetailsDialogComponent } from '@syndicus/shared/dialogs/building-details-dialog/building-details-dialog.component';
 
+export interface DialogOptions {
+  hasCloseButton?: boolean;
+  [key: string]: any; // Allows passing additional custom options
+}
 const defaultDialogConfig = {
   position: {
     right: '0',
@@ -20,24 +25,38 @@ export class DialogService {
   readonly dialog = inject(MatDialog);
   dialogConfig = new MatDialogConfig();
 
-  constructor() {}
+  constructor() {
+    this.dialogConfig = defaultDialogConfig;
+  }
 
-  open(customerId?: any) {
-    this.dialogConfig.data = { id: customerId };
-    this.dialogConfig.position = {
-      right: '0',
-      bottom: '0',
-    };
-    this.dialogConfig.maxHeight = '100vh';
-    this.dialogConfig.enterAnimationDuration = 0; // needed to auto scroll top
+    open<T>(component: ComponentType<T>, options: DialogOptions = {}) {
+    return this.dialog.open(component, {
+      data: options,
+      width: options?.['width'] || '400px',
+      disableClose: options?.hasCloseButton === false,
+    });
+  }
 
-    this.dialog.open(BaseDialogComponent, this.dialogConfig);
+  openBuildingDialog(buildingDetails) {
+    this.dialogConfig.data = buildingDetails;
+    this.dialogConfig.width = '500px';
+    this.dialogConfig.height = '10px';
+
+    console.log(this.dialogConfig.height)
+
+    this.dialog.open(BuildingDetailsDialogComponent, this.dialogConfig);
   }
 
   openCustomerDetailDialog(customerDetails) {
-    this.dialogConfig = defaultDialogConfig;
     this.dialogConfig.data = customerDetails;
 
     this.dialog.open(CustomerDetailsDialogComponent, this.dialogConfig);
+  }
+
+  openSupplierDialog(supplierDetails) {
+    // this.dialogConfig.data = supplierDetails;
+    // this.dialogConfig.clo
+
+    // this.dialog.open(DialogComponent, this.dialogConfig);
   }
 }

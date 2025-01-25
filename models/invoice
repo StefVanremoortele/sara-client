@@ -1,0 +1,31 @@
+Invoice Model
+Attributes:
+
+invoice_id (Unique identifier for the invoice)
+supplier (The supplier or contractor who issued the invoice)
+building (The building to which the invoice is associated)
+invoice_date (The date the invoice was issued)
+due_date (The date by which payment is due)
+amount (The total amount of the invoice)
+service_type (Type of service the invoice covers, e.g., maintenance, cleaning)
+paid (Boolean flag to indicate if the invoice has been paid)
+payment_date (The date when the invoice was paid, if applicable)
+description (A brief description or details of the services provided)
+status (Status of the invoice, e.g., "pending", "paid", "overdue")
+building_fiscal_year (The fiscal year this invoice applies to, if necessary for cost allocation)
+Key Methods:
+
+Marks the invoice as paid and records the payment date.
+mark_as_paid()
+
+Returns the outstanding balance if the invoice hasn’t been paid.
+get_outstanding_amount()
+
+Generates a report summarizing the invoice details, such as amount, supplier, service type, and status.
+generate_invoice_report()
+
+Associates the invoice with a specific building, if not already linked.
+associate_with_building(building)
+
+Allocates the cost of the invoice to shared costs, based on the building and its financial management (e.g., adds to the total shared maintenance cost).
+allocate_to_shared_costs()

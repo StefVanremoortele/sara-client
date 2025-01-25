@@ -1,0 +1,37 @@
+<div class="building-detail">
+  <!-- Building Information Section -->
+  <mat-card class="building-info">
+    <mat-card-header>
+      <mat-card-title>{{ building?.name }}</mat-card-title>
+      <mat-card-subtitle>{{ building?.address }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Owner:</strong> {{ building?.owner }}</p>
+      <p><strong>Construction Year:</strong> {{ building?.constructionYear }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <hr />
+
+  <!-- Perivatives Section -->
+  <div class="privatives-section">
+    <h2>Peivatives</h2>
+    <mat-list *ngIf="privatives?.length; else noPrivatives">
+      <mat-list-item *ngFor="let privative of privatives">
+        <app-privative-detail [privative]="privative">
+        <mat-chip color="primary" selected>{{ privative.size }}</mat-chip>
+        </app-privative-detail>
+      </mat-list-item>
+    </mat-list>
+    <ng-template #noPrivatives>
+      <p>No privatives available.</p>
+    </ng-template>
+
+    <hr />
+
+    <!-- Add Privative Button -->
+    <button mat-raised-button color="primary" (click)="addPrivative()">
+      Add Privative
+    </button>
+  </div>
+</div> 

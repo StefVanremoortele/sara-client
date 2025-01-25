@@ -1,0 +1,21 @@
+FiscalYear Model
+Attributes:
+
+fiscal_year_id (Unique identifier for the fiscal year)
+start_date (Start date of the fiscal year)
+end_date (End date of the fiscal year)
+building (The building this fiscal year is associated with)
+budget (Total annual budget for the building during this fiscal year)
+shared_costs (Total shared costs for the fiscal year)
+actual_costs (Actual costs incurred during the fiscal year)
+tenant_contributions (Total contributions from tenants for shared costs)
+Key Methods:
+
+Calculates the total costs for the fiscal year, including actual maintenance, utilities, and other expenses.
+calculate_total_costs()
+
+Calculates the total contributions from tenants based on their share of the costs.
+calculate_tenant_contributions()
+
+Generates a summary of the fiscal year's financials, including costs and revenue.
+generate_summary()
